@@ -4,17 +4,23 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  line-height: 2;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #b7b597;
+  background-color: #254336;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 a {
@@ -35,38 +41,58 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2em;
+  font-weight: bold;
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+label {
+  display: flex;
+  gap: 10px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  color: #254336;
+  background-color: #808b7a;
+  border: 2px solid #dad3be;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+input:focus {
+  outline: none;
+  background-color: #dad3be;
+  border: 2px solid #dad3be;
+}
+
+.cv-preview {
+  background-color: #dad3be;
+  width: 500px;
+  padding: 30px 40px;
+  align-self: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.cv-preview > div {
+  background-color: #808b7a;
+  border-radius: 10px;
+  width: auto;
+  padding: 20px;
+}
+
+.cv-preview p {
+  color: #254336;
+  font-size: 14px;
+}
+
+.iconify {
+  cursor: pointer;
+  font-size: 30px;
 }
