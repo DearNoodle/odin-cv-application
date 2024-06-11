@@ -1,6 +1,6 @@
-import { CVData } from './CVData';
-import { Form } from './Form';
-import { CVPreview } from './CVPreview';
+import { CVData } from './components/CVData';
+import { Form } from './components/Form';
+import { CVPreview } from './components/CVPreview';
 import { useState } from 'react';
 
 export function App() {
@@ -9,11 +9,10 @@ export function App() {
   return (
     <>
       <div className='flex flex-col gap-8'>
-        <Form formData={cv.info} updateForm={(update) => setCV({ ...cv, info: update })} />
-        <Form formData={cv.study} updateForm={(update) => setCV({ ...cv, study: update })} />
-        <Form formData={cv.job} updateForm={(update) => setCV({ ...cv, job: update })} />
-
-        <CVPreview cv={cv} />
+        {Object.keys(cv).map((sectionName) => (
+          <Form key={sectionName} cv={cv} setCV={setCV} sectionName={sectionName}></Form>
+        ))}
+        <CVPreview key='cv' cv={cv} setCV={setCV} />
       </div>
     </>
   );

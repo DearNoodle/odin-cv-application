@@ -87,6 +87,11 @@ input:focus {
   padding: 20px;
 }
 
+.cv-preview h2 {
+  font-size: x-large;
+  font-weight: bold;
+}
+
 .cv-preview p {
   color: #254336;
   font-size: 14px;
@@ -95,4 +100,9 @@ input:focus {
 .iconify {
   cursor: pointer;
   font-size: 30px;
+}
+
+.cv-preview .iconify {
+  cursor: pointer;
+  font-size: 20px;
 }
